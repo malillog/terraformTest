@@ -1,0 +1,9 @@
+module "aws_pre" {
+ source = "/home/pi/terraformModules"
+ key_name = "key_preproduccion"
+ public_key	= file("${path.module}/id_rsa.pub")
+ instance_name	= "instanciaPre"
+ sg_name	= "sgPreproduccion"
+ cidr_vpc	= "10.60.0.0/16"
+ cidr_subnet1	= "10.60.2.0/24"
+}
